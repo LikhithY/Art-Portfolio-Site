@@ -1,7 +1,7 @@
 import {Routes, Route} from 'react-router-dom';
-import Home from "./components/Home"
-import PersonalProjects from './components/PersonalProjects';
-import ProfessionalProjects from './components/ProfessionalProjects';
+import HomePage from "./pages/HomePage"
+import PersonalProjects from './pages/PersonalProjects';
+import ProfessionalProjects from './pages/ProfessionalProjects';
 
 
 
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="dark:bg-black">
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/" element={<HomePage />}/>
         <Route path="/personal-projects" element={<PersonalProjects />}/>
         <Route path="/professional-projects" element={<ProfessionalProjects />}/>
       </Routes>

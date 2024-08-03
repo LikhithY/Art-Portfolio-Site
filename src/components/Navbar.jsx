@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-evenly mt-5">
+    <div className="flex justify-evenly mt-5 dark:text-white">
       {/* left heading */}
 
       <motion.div
