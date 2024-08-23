@@ -45,6 +45,9 @@ import Pic4 from "../src/assets/cat-mascot/4.png";
 import Pic5 from "../src/assets/cat-mascot/5.png";
 
 
+export const bestForHomeGallery = [CrowForgeThumbnail, gb3, ab1, face, rb1];
+
+
 export const personalProjectsGallery = [
     {
       id: 1,
