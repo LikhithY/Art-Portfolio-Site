@@ -1,53 +1,13 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import thumbnail from "../assets/aria-crowforge/Aria-Landscape.png";
-import crowPic1 from "../assets/aria-crowforge/page-1.png";
-import crowPic2 from "../assets/aria-crowforge/page-2.png";
-import crowPic3 from "../assets/aria-crowforge/page-3.png";
-import crowPic4 from "../assets/aria-crowforge/page-4.png";
-import crowPic5 from "../assets/aria-crowforge/page-5.png";
-import crowPic6 from "../assets/aria-crowforge/page-6.png";
-
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdAddCircle } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { GrGallery } from "react-icons/gr";
+import { personalProjectsGallery } from "../../backend/mockdb";
 
-const galleryItem = [
-  {
-    id: 1,
-    name: "Aria CrowForge",
-    description:
-      "Aria CrowForge is an original character design project featuring a warrior who hails from a clan of legendary blacksmiths.",
-    thumbnail: thumbnail,
-    pictures: [crowPic1, crowPic2, crowPic3, crowPic4, crowPic5, crowPic6],
-  },
-  {
-    id: 2,
-    name: "Aria CrowForge",
-    description:
-      "Aria CrowForge is an original character design project featuring a warrior who hails from a clan of legendary blacksmiths.",
-    thumbnail: thumbnail,
-    pictures: [crowPic1, crowPic2, crowPic3, crowPic4, crowPic5, crowPic6],
-  },
-  {
-    id: 3,
-    name: "Aria CrowForge",
-    description:
-      "Aria CrowForge is an original character design project featuring a warrior who hails from a clan of legendary blacksmiths.",
-    thumbnail: thumbnail,
-    pictures: [crowPic1, crowPic2, crowPic3, crowPic4, crowPic5, crowPic6],
-  },
-  {
-    id: 4,
-    name: "Aria CrowForge",
-    description:
-      "Aria CrowForge is an original character design project featuring a warrior who hails from a clan of legendary blacksmiths.",
-    thumbnail: thumbnail,
-    pictures: [crowPic1, crowPic2, crowPic3, crowPic4, crowPic5, crowPic6],
-  },
-];
+
 
 const PersonalProjects = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -65,29 +25,31 @@ const PersonalProjects = () => {
           ease: "easeInOut",
         }}
       >
-        {galleryItem.map((item) => (
+        {personalProjectsGallery.map((item) => (
           <div
             key={item.id}
             id={item.id}
-            className="relative cursor-pointer group"
+            className="relative cursor-pointer rounded-xl transform transition-transform duration-300 hover:scale-105 hover:shadow-lg ease-in-out group"
             onClick={() => setSelectedItem(item)}
           >
             <img
               src={item.thumbnail}
               alt={item.name}
-              className="w-full h-auto rounded-xl"
+              className="w-full h-60 rounded-xl"
             />
             <div className="absolute top-5 left-0 ml-5 rounded-full bg-white w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <GrGallery className="text-neutral-400 text-lg" />
           </div>
-            <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {/* <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <h2 className="text-xl font-bold text-white">{item.name}</h2>
-            </div>
+            </div> */}
           </div>
         ))}
 
         <div
-          className="relative cursor-pointer flex items-center justify-center h-auto bg-gray-500 rounded-xl "
+          className="relative cursor-pointer flex items-center justify-center h-60 bg-gray-500 rounded-xl 
+      bg-opacity-10 backdrop-blur-lg shadow-sm transform transition-transform duration-300 ease-in-out
+      hover:scale-105 hover:shadow-lg"
           onClick={() => alert("Add more items")}
         >
           <MdAddCircle className="text-4xl text-gray-600" />
@@ -96,7 +58,7 @@ const PersonalProjects = () => {
         <AnimatePresence>
           {selectedItem && selectedItem.id && (
             <motion.div
-              className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70"
+              className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
               layoutId={selectedItem.id}
               onClick={() => setSelectedItem(null)}
               initial={{ opacity: 0, scale: 0.8 }}

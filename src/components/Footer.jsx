@@ -30,7 +30,7 @@ const Footer = () => {
       initial={{ y: 30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.75 }}
-      className="flex space-x-40 justify-center mb-10 text-neutral-400 dark:text-white"
+      className="flex space-x-40 justify-center pb-10 text-neutral-400 dark:text-white"
     >
       <FaRegUserCircle size={28} />
       <FaRegEnvelope size={28} />

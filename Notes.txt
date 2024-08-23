@@ -1,4 +1,2 @@
-1. When we hover over icons and pictures we need to apply zoom in animation.
-2. Make add projects bg has glass.
-3. Make navbar and footer fixed in every page.
-4. Ask more sample projects for display.
+
+
