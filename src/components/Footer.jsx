@@ -52,7 +52,7 @@ const Footer = () => {
         title="about me"
         size={28}
         className={`cursor-pointer ${
-          isAboutMeActive ? "text-white" : ""
+          isAboutMeActive ? "dark:text-white text-black" : ""
         }`}
         onClick={handleClick("aboutMe")}
       />

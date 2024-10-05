@@ -1,2 +1,13 @@
+Setup redux tool kit and perform the following:
+1. temporarily make add, edit form working. Done
+2. Add delete functionality. Done
+3. Put an icon at the top to edit the order of projects, people can click and hold and move it to respective places, 
+if possible add the same func in the add and edit forms too.
+4. Adjust the UI for medium, large and xl screens.
+5. Adjust UI for mobile screens. in mobiles don't do any kind of admin related UI changes.
+
+
+-use google firebase as db and hoisting.
+-add an edit field for secret key too in bcknd.
 
 

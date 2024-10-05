@@ -101,7 +101,7 @@ export const personalProjectsGallery = [
 
 
 
-export const ProfessionalProjectsGallery = [
+export const professionalProjectsGallery = [
   {
     id: 1,
     name: "Cat Mascot",
